@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BMR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <div class="container">
+        <H1>Calculate your BMR</H1>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <textarea id="Gender" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Gender</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <textarea id="Age" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Age</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <textarea id="Height" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Height in Inches</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <textarea id="Weight" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Weight</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id = "results">
+            </div>
+    </div>
+  <div class = "center">
+        <a class ="waves-effect waves-light btn"onClick="calc()">Calculate</a>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        function calc(){
+            var gender = $("#Gender").val();
+            var age = $("#Age").val();
+            var height = $("#Height").val();
+            var weight = $("#Weight").val();
+            $("#results").html(bmr(gender, age, height, weight));
+        }
+        function bmr(gender, age, lbs, inch) {
+            if (gender === "male") {
+                return 66 + (6.23 * lbs) + (12.7 * inch) - (6.8 * age)
+            }
+            if (gender === "female") {
+                return 655 + (4.35 * lbs) + (4.7 * inch) - (4.7 * age)
+            }
+            return null
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.center {
+    text-align: center;
+}
+.answer {
+    text-align: center;
+}
+body {
+    background-image: url("https://evolutioneat.com/wp-content/uploads/2017/08/6f66fc0ee89eac4cb13eceae9bf66242.jpeg");
+    background-size: cover;
+}
+textarea1 {
+    color: yellow
+  }
