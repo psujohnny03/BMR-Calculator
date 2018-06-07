@@ -11,7 +11,8 @@
 
 <body>
     <div class="container">
-        <H1>Calculate your BMR</H1>
+        <H1><u>Calculate Your Base Metabolic Rate</u></H1>
+        <H4>This number is the amount of calories needed per day to maintain vital functions.</H4>
         <div class="row">
             <form class="col s12">
                 <div class="row">
@@ -29,18 +30,17 @@
                     </div>
                     <div class="input-field col s6">
                         <textarea id="Weight" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Weight</label>
+                        <label for="textarea1">Weight in Lbs</label>
                     </div>
                 </div>
             </form>
         </div>
-        <div id = "results">
-            </div>
     </div>
   <div class = "center">
         <a class ="waves-effect waves-light btn"onClick="calc()">Calculate</a>
+    </div> <br>
+    <div id = "results">
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
@@ -54,10 +54,10 @@
             $("#results").html(bmr(gender, age, height, weight));
         }
         function bmr(gender, age, lbs, inch) {
-            if (gender === "male") {
+            if (gender === "male" || gender === "Male") {
                 return 66 + (6.23 * lbs) + (12.7 * inch) - (6.8 * age)
             }
-            if (gender === "female") {
+            if (gender === "female" || gender === "Female") {
                 return 655 + (4.35 * lbs) + (4.7 * inch) - (4.7 * age)
             }
             return null

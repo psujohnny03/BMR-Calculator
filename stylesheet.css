@@ -5,9 +5,17 @@
     text-align: center;
 }
 body {
-    background-image: url("https://evolutioneat.com/wp-content/uploads/2017/08/6f66fc0ee89eac4cb13eceae9bf66242.jpeg");
+    background-image: url("http://www.worldmeeting2015.org/wp-content/uploads/2018/04/onlyfitness_group-fitness_1706x1280Px43.jpg");
     background-size: cover;
 }
 textarea1 {
     color: yellow
   }
+#results {
+    text-align: center;
+    font-size: xx-large;
+    color: goldenrod;
+}
+.row {
+    color: goldenrod;
+}
